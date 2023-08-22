@@ -17,7 +17,7 @@ def create_table() -> None:
             create_table_query = """
             CREATE TABLE IF NOT EXISTS users(
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
-                chat_id INTEGER,
+                chat_id BIGINT,
                 username TEXT,
                 gpt_model TEXT,
                 language TEXT
