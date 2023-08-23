@@ -12,3 +12,4 @@ def get_translation(language: str) -> Callable[..., str]:
     translation = gettext.translation(domain="base", localedir=locales_path, languages=[language], fallback=True)
 
     return translation.gettext
+

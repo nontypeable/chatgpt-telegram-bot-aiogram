@@ -2,7 +2,7 @@ from aiogram import Router, F, types
 
 from bot.db.methods.fetch import fetch
 from bot.db.methods.update import update
-from bot.utils import get_translation
+from bot.misc.get_translation import get_translation
 
 router = Router()
 
