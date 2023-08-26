@@ -1,14 +1,15 @@
-from aiogram import Router, F, types
+from aiogram import Router, F, types, Bot
 
 from bot.db.methods.fetch import fetch
 from bot.db.methods.update import update
 from bot.misc.get_translation import get_translation
+from bot.misc.show_menu import show_menu
 
 router = Router()
 
 
 @router.callback_query(F.data == "russian")
-async def set_russian_language(callback: types.CallbackQuery) -> None:
+async def set_russian_language(callback: types.CallbackQuery, bot: Bot) -> None:
     """method that sets the Russian language for a user in the database"""
 
     update(message=callback.message, language="ru")
@@ -19,11 +20,13 @@ async def set_russian_language(callback: types.CallbackQuery) -> None:
 
     _ = get_translation(language)  # alias for the function
 
+    await show_menu(bot=bot, data=callback)
+
     await callback.answer(_("ready"))
 
 
 @router.callback_query(F.data == "english")
-async def set_english_language(callback: types.CallbackQuery) -> None:
+async def set_english_language(callback: types.CallbackQuery, bot: Bot) -> None:
     """method that sets the English language for a user in the database"""
 
     update(message=callback.message, language="en")
@@ -33,5 +36,7 @@ async def set_english_language(callback: types.CallbackQuery) -> None:
     language = fetch(fetch_language_query, (callback.message.chat.id,))[0][0]
 
     _ = get_translation(language)  # alias for the function
+
+    await show_menu(bot=bot, data=callback)
 
     await callback.answer(_("ready"))
