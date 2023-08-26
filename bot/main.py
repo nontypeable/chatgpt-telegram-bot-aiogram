@@ -1,10 +1,11 @@
 import os
 
+from aiogram import Bot, Dispatcher
 from aiogram.enums import ParseMode
 from dotenv import load_dotenv
-from aiogram import Bot, Dispatcher
 
 from bot.handlers.register_all_handlers import register_all_handlers
+from bot.middlewares.update_date_and_time_in_database import UpdateLastUsageTimeMiddleware
 
 # defining the absolute path to the environment file
 env_path = os.path.join(os.path.dirname(__file__), "env.env")
@@ -16,6 +17,8 @@ async def start() -> None:
     """method that starts the bot"""
     bot = Bot(token=os.getenv("TELEGRAM_BOT_TOKEN"), parse_mode=ParseMode.MARKDOWN)
     dp = Dispatcher()
+
+    dp.message.middleware(UpdateLastUsageTimeMiddleware())
 
     register_all_handlers(dp)
 
