@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 
 from bot.handlers.register_all_handlers import register_all_handlers
 from bot.middlewares.update_date_and_time_in_database import UpdateLastUsageTimeMiddleware
+from bot.middlewares.check_username_in_database import UsernameCheckMiddleware
 
 # defining the absolute path to the environment file
 env_path = os.path.join(os.path.dirname(__file__), "env.env")
@@ -19,6 +20,7 @@ async def start() -> None:
     dp = Dispatcher()
 
     dp.message.middleware(UpdateLastUsageTimeMiddleware())
+    dp.message.middleware(UsernameCheckMiddleware())
 
     register_all_handlers(dp)
 
