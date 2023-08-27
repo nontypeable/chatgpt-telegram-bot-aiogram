@@ -11,3 +11,10 @@ async def settings(message: types.Message, bot: Bot):
     """a method that sends the bot settings to the user on command"""
 
     await show_settings(data=message, bot=bot)
+
+
+@router.callback_query(F.data == "settings")
+async def settings(callback: types.CallbackQuery, bot: Bot):
+    """method that sends the bot settings to the user on clicking on an inline button"""
+
+    await show_settings(data=callback, bot=bot)
