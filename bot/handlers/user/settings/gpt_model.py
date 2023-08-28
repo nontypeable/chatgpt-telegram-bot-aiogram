@@ -4,6 +4,7 @@ from bot.db.methods.fetch import fetch
 from bot.db.methods.update import update
 from bot.misc.get_translation import get_translation
 from bot.misc.show_gpt_model_settings import show_gpt_model_settings
+from bot.misc.show_menu import show_menu
 
 router = Router()
 
@@ -18,7 +19,7 @@ async def update_and_show_settings(callback: types.CallbackQuery, gpt_model: str
     _ = get_translation(language)  # alias for the function
 
     update(callback.message, gpt_model=gpt_model)
-    await show_gpt_model_settings(bot=bot, data=callback)
+    await show_menu(bot=bot, data=callback)
 
     await callback.answer(_("ready"))
 
