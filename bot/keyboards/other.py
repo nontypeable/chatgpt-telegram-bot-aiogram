@@ -12,14 +12,14 @@ def start_language_setup_keyboard() -> InlineKeyboardMarkup:
     keyboard.row(
         InlineKeyboardButton(
             text="🇷🇺 Русский",
-            callback_data="russian"
+            callback_data="ru"
         )
     )
 
     keyboard.row(
         InlineKeyboardButton(
             text="🇺🇸 English",
-            callback_data="english"
+            callback_data="en"
         )
     )
 
