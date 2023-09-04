@@ -1,0 +1,72 @@
+# Russian translations for PROJECT.
+# Copyright (C) 2023 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2023-08-29 16:51+0300\n"
+"PO-Revision-Date: 2023-08-29 16:52+0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ru\n"
+"Language-Team: ru <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: handlers/user/ai/gpt_request.py:22
+msgid "request has been sent"
+msgstr "Запрос был отправлен."
+
+#: handlers/user/settings/gpt_model.py:24 handlers/user/settings/language.py:33
+#: handlers/user/settings/language.py:50
+msgid "ready"
+msgstr "Готово!"
+
+#: keyboards/inline/menu/settings.py:38 keyboards/other.py:42
+msgid "back to menu"
+msgstr "Вернуться в меню"
+
+#: keyboards/inline/menu/menu.py:19
+msgid "information"
+msgstr "Информация"
+
+#: keyboards/inline/menu/menu.py:26
+msgid "settings"
+msgstr "Настройки"
+
+#: keyboards/inline/menu/settings.py:23
+msgid "language"
+msgstr "Язык"
+
+#: keyboards/inline/menu/settings.py:30
+msgid "gpt model"
+msgstr "Модель GPT"
+
+#: keyboards/inline/settings/gpt_model.py:40
+#: keyboards/inline/settings/language.py:35
+msgid "back to settings"
+msgstr "Вернуться в настройки"
+
+#: misc/show_gpt_model_settings.py:28 misc/show_gpt_model_settings.py:31
+#: misc/show_information.py:27 misc/show_information.py:30
+msgid "information text"
+msgstr "👋 Здравствуйте, Босс!\n\n🔑 Этот бот открывает доступ к продуктам Open AI.\n\n🤝 Вы можете общаться с ботом, как с живым собеседником, задавая вопросы на любом языке.\n\n👽 Обратите внимание, что иногда бот придумывает факты, а также обладает ограниченными знаниями о событиях после 2021 года.\n\n🧮 У бота имеются проблемы в области точных наук.\n\n✉️ Чтобы получить текстовый ответ, просто напишите в чат ваш вопрос.\n\n🤖 Бот находится в Бета-тесте. Многие функции могут быть крайне сырыми!"
+
+#: misc/show_language_settings.py:28 misc/show_language_settings.py:30
+msgid "language settings text"
+msgstr "Выберите ваш язык:"
+
+#: misc/show_menu.py:30 misc/show_menu.py:33
+msgid "hello, {first_name}"
+msgstr "Здравствуйте, {first_name}!"
+
+#: misc/show_settings.py:28 misc/show_settings.py:31
+msgid "settings text"
+msgstr "Настройте всё, что вам нужно:"
+
