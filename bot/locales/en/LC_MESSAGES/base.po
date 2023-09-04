@@ -1,0 +1,71 @@
+# English translations for PROJECT.
+# Copyright (C) 2023 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2023-08-29 16:51+0300\n"
+"PO-Revision-Date: 2023-08-29 16:52+0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: handlers/user/ai/gpt_request.py:22
+msgid "request has been sent"
+msgstr "Request has been sent."
+
+#: handlers/user/settings/gpt_model.py:24 handlers/user/settings/language.py:33
+#: handlers/user/settings/language.py:50
+msgid "ready"
+msgstr "Ready!"
+
+#: keyboards/inline/menu/settings.py:38 keyboards/other.py:42
+msgid "back to menu"
+msgstr "Back to menu"
+
+#: keyboards/inline/menu/menu.py:19
+msgid "information"
+msgstr "Information"
+
+#: keyboards/inline/menu/menu.py:26
+msgid "settings"
+msgstr "Settings"
+
+#: keyboards/inline/menu/settings.py:23
+msgid "language"
+msgstr "Language"
+
+#: keyboards/inline/menu/settings.py:30
+msgid "gpt model"
+msgstr "GPT Model"
+
+#: keyboards/inline/settings/gpt_model.py:40
+#: keyboards/inline/settings/language.py:35
+msgid "back to settings"
+msgstr "Back to settings"
+
+#: misc/show_gpt_model_settings.py:28 misc/show_gpt_model_settings.py:31
+#: misc/show_information.py:27 misc/show_information.py:30
+msgid "information text"
+msgstr "👋 Hello, Boss!\n\n🔑 This bot opens access to OpenAI products.\n\n🤝 You can communicate with the bot as with a live interlocutor, asking questions in any language.\n\nPlease note that sometimes the bot comes up with facts, and also has limited knowledge about events after 2021.\n\nThe bot has problems in the field of exact sciences.\n\n✉️ To get a text answer, just write your question to the chat.\n\n🤖The bot is in Beta test. Many functions can be extremely raw!"
+
+#: misc/show_language_settings.py:28 misc/show_language_settings.py:30
+msgid "language settings text"
+msgstr "Choose your language:"
+
+#: misc/show_menu.py:30 misc/show_menu.py:33
+msgid "hello, {first_name}"
+msgstr "Hello, {first_name}!"
+
+#: misc/show_settings.py:28 misc/show_settings.py:31
+msgid "settings text"
+msgstr "Customize what you need:"
+
