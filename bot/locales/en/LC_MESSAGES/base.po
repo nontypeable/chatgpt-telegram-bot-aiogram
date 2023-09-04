@@ -29,7 +29,7 @@ msgstr "Ready!"
 
 #: keyboards/inline/menu/settings.py:38 keyboards/other.py:42
 msgid "back to menu"
-msgstr "Ready!"
+msgstr "Back to menu"
 
 #: keyboards/inline/menu/menu.py:19
 msgid "information"
