@@ -25,10 +25,10 @@ async def show_gpt_model_settings(bot: Bot, data: Union[types.CallbackQuery, typ
 
         if isinstance(data, types.CallbackQuery):
             await bot.edit_message_text(chat_id=chat_id, message_id=message_id,
-                                        text=_("information text"),
+                                        text=_("gpt settings text"),
                                         reply_markup=gpt_model_keyboard(chat_id))
         elif isinstance(data, types.Message):
-            await data.answer(text=_("information text"),
+            await data.answer(text=_("gpt settings text"),
                               reply_markup=gpt_model_keyboard(chat_id))
 
     except Exception as e:

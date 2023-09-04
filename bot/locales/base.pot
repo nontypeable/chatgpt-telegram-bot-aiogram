@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-08-29 16:51+0300\n"
+"POT-Creation-Date: 2023-09-04 22:44+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -52,6 +52,9 @@ msgid "back to settings"
 msgstr ""
 
 #: misc/show_gpt_model_settings.py:28 misc/show_gpt_model_settings.py:31
+msgid "gpt settings text"
+msgstr ""
+
 #: misc/show_information.py:27 misc/show_information.py:30
 msgid "information text"
 msgstr ""

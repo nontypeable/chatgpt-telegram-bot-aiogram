@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-08-29 16:51+0300\n"
-"PO-Revision-Date: 2023-08-29 16:52+0300\n"
+"POT-Creation-Date: 2023-09-04 22:44+0300\n"
+"PO-Revision-Date: 2023-09-04 22:45+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
 "Language-Team: en <LL@li.org>\n"
@@ -29,7 +29,7 @@ msgstr "Ready!"
 
 #: keyboards/inline/menu/settings.py:38 keyboards/other.py:42
 msgid "back to menu"
-msgstr "Back to menu"
+msgstr "Ready!"
 
 #: keyboards/inline/menu/menu.py:19
 msgid "information"
@@ -53,9 +53,27 @@ msgid "back to settings"
 msgstr "Back to settings"
 
 #: misc/show_gpt_model_settings.py:28 misc/show_gpt_model_settings.py:31
+msgid "gpt settings text"
+msgstr "Choose the right GPT model:"
+
 #: misc/show_information.py:27 misc/show_information.py:30
 msgid "information text"
-msgstr "👋 Hello, Boss!\n\n🔑 This bot opens access to OpenAI products.\n\n🤝 You can communicate with the bot as with a live interlocutor, asking questions in any language.\n\nPlease note that sometimes the bot comes up with facts, and also has limited knowledge about events after 2021.\n\nThe bot has problems in the field of exact sciences.\n\n✉️ To get a text answer, just write your question to the chat.\n\n🤖The bot is in Beta test. Many functions can be extremely raw!"
+msgstr ""
+"👋 Hello, Boss!\n"
+"\n"
+"🔑 This bot opens access to Open AI products.\n"
+"\n"
+"🤝 You can communicate with the bot as with a live interlocutor by asking questions "
+" in any language.\n"
+"\n"
+"👽 Please note that sometimes the bot comes up with facts, and also has "
+"limited knowledge about events after 2021.\n"
+"\n"
+"🧮 The bot has problems in the field of exact sciences.\n"
+"\n"
+"✉️ To get a text answer, just write your question to the chat. \n"
+"\n"
+"🤖 The bot is in Beta test. Many functions can be extremely raw!"
 
 #: misc/show_language_settings.py:28 misc/show_language_settings.py:30
 msgid "language settings text"
@@ -68,4 +86,3 @@ msgstr "Hello, {first_name}!"
 #: misc/show_settings.py:28 misc/show_settings.py:31
 msgid "settings text"
 msgstr "Customize what you need:"
-
