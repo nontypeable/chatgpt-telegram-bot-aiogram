@@ -16,7 +16,7 @@ load_dotenv(env_path)  # loading environment file
 
 async def start() -> None:
     """method that starts the bot"""
-    bot = Bot(token=os.getenv("TELEGRAM_BOT_TOKEN"), parse_mode=ParseMode.MARKDOWN)
+    bot = Bot(token=os.getenv("TELEGRAM_BOT_TOKEN"), parse_mode=ParseMode.HTML)
     dp = Dispatcher()
 
     dp.message.middleware(UpdateLastUsageTimeMiddleware())
