@@ -21,18 +21,22 @@ class UsernameCheckMiddleware(BaseMiddleware):
             with sqlite3.connect(db_path) as connection:
                 cursor = connection.cursor()
 
-                # query to get the username of the user from the database
-                fetch_username_query = """SELECT username FROM users WHERE chat_id = ?"""
-                username_in_db = fetch(fetch_username_query, (event.chat.id,))[0][0]
+                check_user_existence_query = """SELECT * FROM users WHERE chat_id=?"""
+                is_user_in_db = fetch(check_user_existence_query, (event.chat.id,))
 
-                if username_in_db is not event.from_user.username:
-                    # query to update the username of the user in the database
-                    update_username_query = """UPDATE users SET username = ? WHERE chat_id = ?;"""
-                    cursor.execute(update_username_query, (event.from_user.username, event.chat.id,))
+                if is_user_in_db:
+                    # query to get the username of the user from the database
+                    fetch_username_query = """SELECT username FROM users WHERE chat_id = ?"""
+                    username_in_db = fetch(fetch_username_query, (event.chat.id,))[0][0]
+
+                    if username_in_db is not event.from_user.username:
+                        # query to update the username of the user in the database
+                        update_username_query = """UPDATE users SET username = ? WHERE chat_id = ?;"""
+                        cursor.execute(update_username_query, (event.from_user.username, event.chat.id,))
 
         except sqlite3.Error as e:
             print(f"An SQLite3 error has occurred: {e}")
         except Exception as e:
-            print(f"An error has occurred: {e}")
+            print(f"An error has occurred: {e} middleware")
 
         return await handler(event, data)
