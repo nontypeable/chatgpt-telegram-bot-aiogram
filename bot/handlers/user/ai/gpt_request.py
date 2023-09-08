@@ -1,4 +1,7 @@
+# import aiogram.utils.markdown as md
 from aiogram import Router, F, Bot, types
+from aiogram import html
+from aiogram.enums import ParseMode
 
 from bot.db.methods.fetch import fetch
 from bot.misc.get_translation import get_translation
@@ -22,6 +25,6 @@ async def request(message: types.Message, bot: Bot) -> None:
     msg = await message.answer(text=_("request has been sent"))
     text = await gpt_request(message=message)
 
-    await message.answer(text=text)
+    await message.answer(text=html.quote(text), parse_mode=ParseMode.MARKDOWN)
 
     await bot.delete_message(chat_id=chat_id, message_id=msg.message_id)
