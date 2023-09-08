@@ -21,7 +21,8 @@ def create_table() -> None:
                 username TEXT,
                 gpt_model TEXT,
                 language TEXT,
-                last_usage DATETIME
+                last_usage DATETIME,
+                is_admin BOOLEAN DEFAULT 0 CHECK (is_admin IN (0, 1))
             )
             """
 
@@ -31,3 +32,5 @@ def create_table() -> None:
         print(f"An SQLite3 error has occurred: {e}")
     except Exception as e:
         print(f"An error has occurred: {e}")
+
+create_table()
