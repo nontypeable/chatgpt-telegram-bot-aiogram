@@ -25,6 +25,6 @@ async def request(message: types.Message, bot: Bot) -> None:
     msg = await message.answer(text=_("request has been sent"))
     text = await gpt_request(message=message)
 
-    await message.answer(text=html.quote(text), parse_mode=ParseMode.MARKDOWN)
+    await message.answer(text=html.quote(text), parse_mode=ParseMode.HTML)
 
     await bot.delete_message(chat_id=chat_id, message_id=msg.message_id)
